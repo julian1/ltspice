@@ -1,3 +1,4 @@
 *.log
-*.raw
+# *.raw
+*.op.raw
 *.net
