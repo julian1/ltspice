@@ -11,28 +11,28 @@
 
 
 *---------- DMN63D8L Spice Model ----------
-.SUBCKT DMN63D8L 10 20 30 
+.SUBCKT DMN63D8L 10 20 30
 *     TERMINALS:  D  G  S
-M1 1 2 3 3  NMOS  L = 1E-006  W = 1E-006 
-RD 10 1 1.906 
-RS 30 3 0.001 
-RG 20 2 62 
-CGS 2 3 2.111E-011 
-EGD 12 0 2 1 1 
-VFB 14 0 0 
-FFB 2 1  VFB 1 
-CGD 13 14 5.5E-011 
-R1 13 0 1 
-D1 12 13  DLIM 
-DDG 15 14  DCGD 
-R2 12 15 1 
-D2 15 0  DLIM 
-DSD 3 10  DSUB 
-.MODEL NMOS NMOS  LEVEL = 3  VMAX = 5.378E+005  ETA = 0.001  VTO = 1.592 
-+ TOX = 6E-008  NSUB = 1E+016  KP = 0.5626  U0 = 400  KAPPA = 10 
-.MODEL DCGD D  CJO = 1.249E-011  VJ = 0.7186  M = 0.6 
-.MODEL DSUB D  IS = 1.685E-012  N = 1.251  RS = 0.2452  BV = 65  CJO = 6.828E-012  VJ = 0.6  M = 0.6 
-.MODEL DLIM D  IS = 0.0001 
+M1 1 2 3 3  NMOS  L = 1E-006  W = 1E-006
+RD 10 1 1.906
+RS 30 3 0.001
+RG 20 2 62
+CGS 2 3 2.111E-011
+EGD 12 0 2 1 1
+VFB 14 0 0
+FFB 2 1  VFB 1
+CGD 13 14 5.5E-011
+R1 13 0 1
+D1 12 13  DLIM
+DDG 15 14  DCGD
+R2 12 15 1
+D2 15 0  DLIM
+DSD 3 10  DSUB
+.MODEL NMOS NMOS  LEVEL = 3  VMAX = 5.378E+005  ETA = 0.001  VTO = 1.592
++ TOX = 6E-008  NSUB = 1E+016  KP = 0.5626  U0 = 400  KAPPA = 10
+.MODEL DCGD D  CJO = 1.249E-011  VJ = 0.7186  M = 0.6
+.MODEL DSUB D  IS = 1.685E-012  N = 1.251  RS = 0.2452  BV = 65  CJO = 6.828E-012  VJ = 0.6  M = 0.6
+.MODEL DLIM D  IS = 0.0001
 .ENDS
 *Diodes DMN63D8L Spice Model v1.0 Last Revised 2015/7/3
 
@@ -41,30 +41,30 @@ DSD 3 10  DSUB
 
 *---------- DMP31D7L Spice Model ----------
 
-* JA .SUBCKT DMP31D7L_P 10 20 30 
-.SUBCKT DMP31D7L 10 20 30 
+* JA .SUBCKT DMP31D7L_P 10 20 30
+.SUBCKT DMP31D7L 10 20 30
 *     TERMINALS:  D  G  S
-M1 1 2 3 3 PMOS L = 1E-006 W = 1E-006 
-RD 10 1 0.39 
-RS 30 3 1E-006 
-RG 20 2 4.45 
-CGS 2 3 1.705E-011 
-EGD 12 30 2 1 1 
-VFB 14 30 0 
-FFB 2 1 VFB 1 
-CGD 13 14 6.5E-011 
-R1 13 30 1 
-D1 13 12 DLIM 
-DDG 14 15 DCGD 
-R2 12 15 1 
-D2 30 15 DLIM 
-DSD 10 3 DSUB 
-.MODEL PMOS PMOS LEVEL = 3 U0 = 400 VMAX = 1E+006 ETA = 0.001 
-+ TOX = 6E-008 NSUB = 1E+016 KP = 1.131 KAPPA = 19.32 VTO = -2.377 
-.MODEL DCGD D CJO = 7E-012 VJ = 0.8 M = 0.6 
-.MODEL DSUB D IS = 2.459E-009 N = 1.767 RS = 0.05116 BV = 34.99 
+M1 1 2 3 3 PMOS L = 1E-006 W = 1E-006
+RD 10 1 0.39
+RS 30 3 1E-006
+RG 20 2 4.45
+CGS 2 3 1.705E-011
+EGD 12 30 2 1 1
+VFB 14 30 0
+FFB 2 1 VFB 1
+CGD 13 14 6.5E-011
+R1 13 30 1
+D1 13 12 DLIM
+DDG 14 15 DCGD
+R2 12 15 1
+D2 30 15 DLIM
+DSD 10 3 DSUB
+.MODEL PMOS PMOS LEVEL = 3 U0 = 400 VMAX = 1E+006 ETA = 0.001
++ TOX = 6E-008 NSUB = 1E+016 KP = 1.131 KAPPA = 19.32 VTO = -2.377
+.MODEL DCGD D CJO = 7E-012 VJ = 0.8 M = 0.6
+.MODEL DSUB D IS = 2.459E-009 N = 1.767 RS = 0.05116 BV = 34.99
 + CJO = 3E-011 VJ = 0.8 M = 0.6
-.MODEL DLIM D IS = 0.0001 
+.MODEL DLIM D IS = 0.0001
 .ENDS
 
 *Diodes DMP31D7L Spice Model v1.0J Last Revised 2018/01/14
@@ -186,12 +186,64 @@ EDB DB1 0 VB1 0 1
 *FDN337N (Rev.B1) 6/23/06
 *ST
 
+
+
+
+# JA https://www.vishay.com/docs/66647/si4228dy.txt
+*Apr 19, 2010
+*Doc. ID: 66647, ECN S10-0918, Rev. A
+*File Name: Si4228DY_PS.txt and Si4228DY_PS.lib
+*This document is intended as a SPICE modeling guideline and does not
+*constitute a commercial product data sheet. Designers should refer to the
+*appropriate data sheet of the same number for guaranteed specification
+*limits.
+.SUBCKT Si4228DY D G S
+M1 3 GX S S NMOS W= 1366633u L= 0.25u
+M2 S GX S D PMOS W= 1366633u L= 2.323e-07
+R1 D 3 8.883e-03 TC=4.423e-03 6.515e-06
+CGS GX S 5.121e-10
+CGD GX D 2.237e-11
+RG G GY 12.5
+RTCV 100 S 1e6 TC=-3.918e-04 -2.264e-06
+ETCV GX GY 100 200 1
+ITCV S 100 1u
+VTCV 200 S 1
+DBD S D DBD
+****************************************************************
+.MODEL NMOS NMOS ( LEVEL = 3 TOX = 3e-8
++ RS = 4.200e-03 KP = 2.622e-05 NSUB = 1.011e+17
++ KAPPA = 1.000e-06 ETA = 9.366e-04 NFS = 6.249e+11
++ LD = 0 IS = 0 TPG = 1)
+***************************************************************
+.MODEL PMOS PMOS ( LEVEL = 3 TOX = 3e-8
++NSUB = 4.639e+16 IS = 0 TPG = -1 )
+****************************************************************
+.MODEL DBD D (
++FC = 0.1 TT = 8.720e-09 T_MEASURED = 25 BV = 26
++RS = 1.302e-02 N = 1.508e+00 IS = 4.720e-08
++EG = 9.745e-01 XTI = 2.126e+00 TRS1 = 7.193e-04
++CJO = 2.959e-10 VJ = 6.215e-01 M = 3.697e-01 )
+.ENDS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ** Released by: Online Design Tools, Texas Instruments Inc.
 * Part: JFE2140
 * Date: 16AUG2021
 * Model Type: Generic (suitable for all analysis types)
-* EVM Order Number: N/A 
-* EVM Users Guide:  N/A 
+* EVM Order Number: N/A
+* EVM Users Guide:  N/A
 * Datasheet: SLPS730
 * Created with Shichman and Hodges JFET SPICE modeling
 *
@@ -203,7 +255,7 @@ EDB DB1 0 VB1 0 1
 * Release to Web.
 *****************************************************************************
 * Model Usage Notes:
-* The following parameters are modeled: 
+* The following parameters are modeled:
 *      Static, large and small signals, and noise parameters
 *
 * Use 2 Symbols of JFEx140 to match one unit of JFE2140 device.
@@ -215,7 +267,7 @@ EDB DB1 0 VB1 0 1
 .model DJFEx140 D Is=1e-12 Cjo=0.1pF Rs=190k BV=10
 .model NJFEx140 NJF (BETA=14.24m BETATCE=-0.22 VTO=-975m VTOTC=0.45m LAMBDA=11.9m RD=10 RS=8 N=1 M=0.33 PB=0.705 IS=5.34f CGD=3.5p CGS=9.2p AF=1 KF=0.2e-18 FC=0.5)
 *
-J_J1         D G S NJFEx140 
+J_J1         D G S NJFEx140
 D_D1         G D   DJFEx140
 X_U1         D VCH VCL ESD_OUT_JFEx140
 X_U2         G VCH VCL ESD_OUT_JFEx140
@@ -301,6 +353,23 @@ S2 OUT VCL VCL OUT ESD_SW
 *##
 *
 
+
+
+
+*SRC=2N7002;2N7002;MOSFETs N;Enh;60.0V 0.115A 7.50ohms  Diodes Inc. -
+.MODEL 2N7002  NMOS( LEVEL=1 VTO=2.50 KP=32.0m  GAMMA=3.10
++ PHI=.75  LAMBDA=39.9u RD=1.05 RS=1.05
++ IS=57.5f  PB=0.800 MJ=0.460 CBD=98.8p
++ CBS=119p  CGSO=60.0n CGDO=50.0n CGBO=390n  )
+*   -- Assumes default L=100U W=100U --
+
+
+*SRC=BSS138;DI_BSS138;MOSFETs N;Enh;50.0V 0.200A 1.40ohms  Diodes Inc.  MOSFET
+.MODEL DI_BSS138  NMOS( LEVEL=1 VTO=1.20 KP=7.50m  GAMMA=1.49
++ PHI=.75  LAMBDA=1.25m RD=0.196 RS=0.196
++ IS=100f  PB=0.800 MJ=0.460 CBD=18.4p
++ CBS=22.0p  CGSO=28.8n CGDO=24.0n CGBO=247n  )
+*   -- Assumes default L=100U W=100U --
 
 
 
